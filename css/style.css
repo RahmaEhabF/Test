@@ -1,0 +1,135 @@
+/* reference: 
+    1- root styles
+    2- custom framework
+    3- general styles
+    4- header
+    5- sections
+        5.0- Main section
+        5.1- Features section
+        5.2- Services section
+        5.3- Portfolio section
+        5.4- About section
+        5.5- Contact section
+    6-footer
+*/
+
+/* 1- root styles */
+:root{
+    --main-color: #10cab7;
+    --sec-color: #2c4755;
+    --section-color: #f6f6f6;
+    --transtion: .2s linear;
+}
+
+
+/* 2- custom framework */
+.flex1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 3- general styles */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+}
+.container {
+    padding: 0 15px;
+    width:85%;
+    margin: auto;
+}
+
+
+/* 4- header */
+header .container {
+    height: 10vh;
+}
+.header-logo img {
+    width: 4rem;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.header-menu-bar {
+    font-size: 2rem;
+    color: var(--sec-color);
+    cursor: pointer;
+    position: relative;
+}
+header .header-menu-bar:hover .header-links {
+    display: block;
+}
+.header-links {
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    display: none;
+}
+.header-links i {
+    position: absolute;
+    right: 0;
+    margin-top: -23px;
+    color: var(--section-color);
+    font-size: 45px;
+}
+.header-links ul li {
+    padding: 1rem;
+    cursor: pointer;
+    transition: var(--transtion);
+    background-color: var(--section-color);
+    width: 13rem;
+    display: flex;
+}
+.header-links ul li:hover {
+    padding-left: 1.5rem;
+}
+.header-links ul li:not(:last-of-type) {
+    border-bottom: 1px solid #ddd;
+}
+.header-links a {
+    color: var(--sec-color);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+
+/* 5.0- Main section */
+.main-section {
+    background-image: url('../images/main-section.jpg');
+    background-size: cover;
+}
+.main-section .cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+    width: 320px;
+    margin: auto;
+    padding: 0 20px;
+}
+.main-section h1 {
+    margin-top: -1.5rem;
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.main-section p {
+    padding: 1.5rem 0px;
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+}
+
+
+/* 5.1- Features section */
+.features-section {
+    height: 60vh;
+    display: flex;
+}
